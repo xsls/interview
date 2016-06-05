@@ -1,0 +1,22 @@
+1.没有块级作用域
+2.typeof检测基本数据类型
+ typeof 2 =='number'  检测基础数据类型 var obj = {}   obj instance Object 检测引用数据类型
+ 3.数组的一些方法:push pop shift unshift reverse sort slice splice
+
+ 一.重点掌握:面向对象的程序设计
+ 1.原型链
+ 2.闭包:是指有权访问另一个函数作用域中的变量函数，创建的常见的形式就是一个函数内部创建另一个函数
+ 3.call apply
+ 4.设计模式:工厂模式，构造函数模式，原型模式
+
+
+function create ()  {
+    var arr = [];
+    for(var i = 0;i<10;i++){
+        arr[i]= function(){
+            return i;
+        }
+        console.log(arr[1], arr[2]);
+    }
+    return arr;
+}
