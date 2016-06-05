@@ -1,0 +1,23 @@
+一.第一天.nodejs微信开发
+1.前期准备的应用
+2.koa的使用
+3.怎么让外网访问本机服务  ngrok工具通道
+4.使用python
+5.tunnel
+6.sudo npm install -g localtunnel
+7.lt --port 3100
+8.APPLEdeMacBook-Pro-4:~ apple$ lt --port 3100
+your url is: https://yzshjmfjit.localtunnel.me
+
+二.验证公众号
+验证公众号的步骤
+1.将token，timestamp，nonce三个参数进行字典排序
+2.将三个参数字符串拼接成一个字符串进行sha1加密
+3.将加密后的字符串与signature对比，如果相同，表示这个请求源于微信，我们直接原样返回echostr参数内容，接入验证就成功了
+4.为什么使用koa框架，而不是express，因为koa框架代码更精简和易懂
+5.异步交互使用koa框架，更加容易理解
+
+
+三.加密认证逻辑代码的实现
+
+1.

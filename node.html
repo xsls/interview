@@ -1,0 +1,114 @@
+var http = require('http');
+
+var fs = require('fs');
+//链式编程的应用
+http.createServer(function(req,res){
+
+	res.writeHead(200);
+
+	res.end('hello world');
+
+}).listen(8080,'127.0.0.1',function(){
+
+	console.log(fs);
+	console.log('服务启动成功');
+
+})
+
+__filename(文件的名)
+
+__dirname(目录文件)
+
+1.promise解决实际的操作，链式的写法
+
+2.异步编程，就是可以使用nodejs  es6的编程的理解
+
+3.es6-promise  then.js
+
+4.Net Buffer Stream
+
+5.网络的数据的处理
+
+6.处理数据的方式Buffer
+
+一.Buffer的静态方法
+1.new Buffer(data) data:string number array
+
+2.Buffer的静态的方法
+  poolSize: 8192, 控制内存的大小
+  isBuffer: [Function: isBuffer],
+  compare: [Function: compare],
+  isEncoding: [Function],
+  concat: [Function],
+  byteLength: [Function: byteLength]
+
+3.Buffer的实例方法
+  var buffer = new Buffer('hello world');
+  buffer.length
+  buffer[index]
+  buffer.write(string,offset,length,encoding);
+  buffer.toString(encoding,start,end);
+  buffer.copy()参数省略
+  buffer.slice(start,end)
+  buffer.compare(otherBuffer);
+  buffer.equals(otherBuffer);
+  buffer.fill(value,offset,end);
+
+4.解读Buffer的源代码
+
+
+
+二.stream
+
+1.使用较大的文件，以buffer的形式存在
+
+三.stream的种类
+
+
+四.node的全局对象
+
+1.process
+
+2.http
+
+3.https
+
+4.console
+
+五.nodejs常用的工具
+
+1.util 是一个Node.js 核心模块，提供常用函数的集合，用于弥补核心JavaScript 的功能 过于精简的不足。
+
+
+六.nodejs的简单介绍
+
+1.Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。
+
+
+2.卸载模块: npm uninstall express
+
+
+3.更新模块: npm update express
+
+4.搜索模块: npm search express
+
+5.创建模块: npm init 
+
+6.发布模块: npm publish
+
+七.nodejs回调函数
+
+八.nodejs事件循环
+
+1.Node.js 基本上所有的事件机制都是用设计模式中观察者模式实现。
+
+
+
+
+
+
+
+
+
+
+
