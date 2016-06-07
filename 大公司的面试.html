@@ -1,0 +1,29 @@
+一.支付宝的面试题
+1.深浅拷贝
+2.react
+3.react-native
+4.vue
+5.原生的js
+6.github
+7.基本的数据类型
+8.null和undefined
+9.数组的一些操作方法 push pop shift unshift slice splice indexof lastIndex
+10.typeof null === object
+11.instanceof
+12.数据的操作方法
+
+
+1.深浅拷贝
+
+var o = {
+	x: 1,
+	y: {
+		z: [false, null, '']
+	}
+};
+
+var s = JSON.stringify(o);
+
+p = JSON.parse(s);
+
+console.log(o, p);
