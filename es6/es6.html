@@ -24,6 +24,109 @@ Declares a read-only named constant.
 
 三.百度旗下公司
 
-1.爱奇艺	
+1.爱奇艺
 2.百度搜索
 3.百度音乐
+
+
+
+
+多处使用回调函数，我们会尽量使用promise（链式编程，这样可以处理复杂的异步回调函数的编程）
+控制其执行的流程
+
+Promise 构造函数接受一个函数作为参数，该函数的两个参数分别是 resolve 方法和 reject 方法。
+
+一.promise的实现
+
+1.bluebird
+2.co
+3.when
+4.q
+
+二.ASYNC
+async 函数与 Promise、Generator 函数一样，是用来取代回调函数、解决异步操作的一种方法。它本质上是 Generator 函数的语法糖。async 函数并不属于 ES6，而是被列入了 ES7。
+
+
+ECMAScript 6  入门  阮一峰
+2016.6.9好学笔记
+1.let和const的命令:let产生块级作用于，为变量；const为常量
+2.变量的解构赋值: var [a,b,c] = [1,2,3];
+3.字符串的扩展:
+	<1>.includes()：返回布尔值，表示是否找到了参数字符串。
+	<2>.startsWith()：返回布尔值，表示参数字符串是否在源字符串的头部。
+	<3>.endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾部。
+	<4>.repeat方法返回一个新字符串，表示将原字符串重复n次。
+4.es7的字符串扩展方法:
+	<1>.ES7推出了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart用于头部补全，padEnd用于尾部补全
+5.数组的扩展:
+    <1>.from():将类似数组的对象，转换成数组 Array.from();
+
+6.Map和Set
+
+7.函数的扩展，函数的参数可以直接赋值
+
+8.对象的扩展
+
+9.Symbol
+
+10.Proxy和Reflect
+
+
+尽快掌握es6语法的使用，写代码的时候，就考虑使用es6的写法
+
+
+
+严格模式主要有以下限制。
+
+1.  变量必须声明后再使用
+2.  函数的参数不能有同名属性，否则报错
+3.  不能使用with语句
+4.  不能对只读属性赋值，否则报错
+5.  不能使用前缀0表示八进制数，否则报错
+6.  不能删除不可删除的属性，否则报错
+7.  不能删除变量delete prop，会报错，只能删除属性delete global[prop]
+8.  eval不会在它的外层作用域引入变量
+9.  eval和arguments不能被重新赋值
+10. arguments不会自动反映函数参数的变化
+11. 不能使用arguments.callee
+12. 不能使用arguments.caller
+13. 禁止this指向全局对象
+14. 不能使用fn.caller和fn.arguments获取函数调用的堆栈
+15. 增加了保留字（比如protected、static和interface)
+
+一.module模块的应用
+
+1.import and export关键字的使用
+
+
+二.Generator函数
+
+1.Generator函数是ES6提供的一种异步编程解决方案，语法行为与传统函数完全不同
+	<1>基本的特征:
+		一是，function关键字与函数名之间有一个星号；二是，函数体内部使用yield语句，定义不同的内部状态（yield语句在英语里的意思就是“产出”）。
+
+2.增强对象的写法
+
+var Person = {
+    name: '张三',
+    birth: birth,
+    birth,
+    sayHello () {
+        console.log('22222');
+    }
+};
+
+=> 函数的使用 promise对象，this的值可以直接使用
+
+箭头函数的使用:
+
+（({data})）＝> {
+    表达体
+}
+
+箭头函数的有点:
+1.简洁
+2.语法上this更加固定
+
+
+promise对象的使用

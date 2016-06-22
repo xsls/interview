@@ -1,0 +1,65 @@
+一.webpack的基本功能的介绍
+Webpack是一款用户打包前端模块的工具。主要是用来打包在浏览器端使用的javascript的。
+同时也能转换、捆绑、打包其他的静态资源，包括css、image、font file、template等。
+个人认为它的优点就是易用，而且常用功能基本都有,
+另外可以通过自己开发loader和plugin来满足自己的需求。
+这里就尽量详细的来介绍下一些基本功能的使用。
+
+二.运行webpack
+webpack需要编写一个config文件，然后根据这个文件来执行需要的打包功能。
+我们现在来编写一个最简单的config。新建一个文件，命名为webpack-config.js。
+config文件实际上就是一个Commonjs的模块。内容如下：
+
+var webpack = require('webpack');
+var path = require('path');
+var buildPath = path.resolve(__dirname,"build");
+var nodemodulesPath = path.resolve(__dirname,'node_modules');
+
+var config = {
+    //入口文件配置
+    entry:path.resolve(__dirname,'src/main.js')，
+    resolve:{
+        extentions:["","js"]//当requrie的模块找不到时，添加这些后缀
+    },
+    //文件导出的配置
+    output:{
+        path:buildPath,
+        filename:"app.js"
+    }
+}
+
+module.exports = config;
+
+
+1.entry:配置要打包的文件的入口;可以配置多个入口文件
+
+2.output:output参数是个对象，用于定义构建后的文件的输出。其中包含path和filename
+
+3.module(loaders):
+配置要使用的loader。对文件进行一些相应的处理。比如babel-loader可以把es6的文件转换成es5。
+大部分的对文件的处理的功能都是通过loader实现的。loader就相当于gulp里的task。
+loader可以用来处理在入口文件中require的和其他方式引用进来的文件。loader一般是一个独立的node模块，要单独安装。
+loader项的配置:
+test: /\.(js|jsx)$/,//注意是正则表达式，不要加引号，匹配要处理的文件
+    loader: 'eslint-loader',//要使用的loader，"-loader"可以省略
+    include: [path.resolve(__dirname, "src/app")],//把要处理的目录包括进来
+    exclude: [nodeModulesPath]//排除不处理的目录
+
+module的配置:
+module: {
+    preLoaders: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'eslint-loader',
+        include: [path.resolve(__dirname, "src/app")],
+        exclude: [nodeModulesPath]
+      },
+    ],
+    loaders: [
+      {
+        test: /\.(js|jsx)$/, //正则表达式匹配 .js 和 .jsx 文件
+        loader: 'babel-loader?optional=runtime&stage=0',//对匹配的文件进行处理的loader
+        exclude: [nodeModulesPath]//排除node module中的文件
+      }
+    ]
+}
