@@ -21,7 +21,7 @@ class SuperPoint extends Point {
 		this.color = color;
 	};
 	toString() {
-		return this.color + '........' + super.toString(); 
+		return this.color + '........' + super.toString();
 	}
 }
 
@@ -46,18 +46,14 @@ console.log(g.next());
 console.log(g.next());
 console.log(g.next());
 
+var arr = [1,2,3,4];
 
 
+//箭头函数的使用
+arr.map((x) => {
+    console.log('x1', x);
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
+arr.map(x=>{
+    console.log('x', x);
+});
