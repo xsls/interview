@@ -26,7 +26,7 @@ add.apply(this,[1,2,3]);
 //改变对象
 window.name = 'name';
 var obj = {
-	
+
 	name:'nyl'
 };
 
@@ -44,7 +44,3 @@ console.log('s',s);
 getName.apply(obj,[1,2,3]);
 
 // call和apply只可以给函数类型的对象调用
-
-
-
-
