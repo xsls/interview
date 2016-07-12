@@ -18,3 +18,48 @@
 
 
 github上有最好的学习资料
+
+
+2016.7.12
+1.创建实例
+var vm = new Vue({
+});
+2.生命周期
+1.created
+2.beforeCompile
+3.compiled
+4.ready
+5.beforeDestory
+6.destoryed
+3.数据绑定语法
+1.v-bind
+2.v-bind:href 简写：=> :href
+3.v-on:click 简写: => :@click
+
+4.计算属性：
+1.computed () {
+
+}
+data () {
+    return {};
+}
+
+5.class和style的绑定
+v-bind:class="{ 'class-a': isA, 'class-b': isB }"
+v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"
+
+6.v-show和v-if
+7.v-for
+8.使用内置的过滤器 filterBy 和 orderBy
+
+9.表单控件的绑定
+10.select
+<select v-model="selected">
+  <option v-for="option in options" v-bind:value="option.value">
+    {{ option.text }}
+  </option>
+</select>
+
+11.过渡
+12.组件:props, slot, 动态组件
+13.计算属性的奥秘
