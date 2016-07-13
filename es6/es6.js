@@ -15,6 +15,7 @@ class Point {
 class SuperPoint extends Point {
 	constructor(x, y, color) {
 		// 继承起方法
+        // super的使用规则
 		super(x,y);
 		// this.x = x;
 		// this.y = y;
@@ -57,3 +58,30 @@ arr.map((x) => {
 arr.map(x=>{
     console.log('x', x);
 });
+
+let arrayList = [
+    {
+        name: 'nyl',
+        age: 21
+    },
+    {
+        name: 'nyl',
+        age: 28
+    }
+];
+console.log('>>>>>>>>>><<<<<<<<<<');
+let result = [];
+arrayList.forEach(val => {
+    const item = val;
+    // 使用delete删除指定的数据
+    delete item['name'];
+    console.log('val1111', val);
+    result.push(item);
+})
+console.log('result1111', result);
+
+result.map((val, key, obj)=> {
+    console.log('value', val);
+    console.log('key', key);
+    console.log('obj', obj);
+})

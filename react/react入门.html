@@ -7,11 +7,119 @@ react的使用
 
 react 的学习 es6的使用
 
+一.放在state和props的各是哪些部分?
 
-放在state和props的各是哪些部分?
+从项目中实际切入
+1.看react的源代码
+2.看react－anted
+
+3.看react的书本理解基本的概念
+
+提高代码的使用率
 
 
-class的写法和解决
+React只关心两件事：
+1.更新dom
+2.相应事件
+
+优点:最小化的重绘，避免了不要的DOM操作
 
 
-1.应用级监控的处理
+
+jsx ＝>javascript xml
+
+1.更加语义话
+2.更加直观
+3.抽象化
+4.关注点分离
+5.复合组件
+
+
+
+
+一.组件的生命周期
+1.实例化开始－>活动期－>销毁
+
+实例化的步骤:
+1.getDefaultProps
+2.getInitialState
+3.componentWillMount
+4.render
+5.componentDidMount
+*:对于组件类所有后续的应用,注意getDefaultProps方法已经不在列表中
+
+存在期的步骤:
+1.componentWillReceiveProps
+2.shouldComponentUpdate
+3.componentWillUpdate
+4.render
+5.componentDidUpdate
+
+清理期的步骤:
+1.componentWillUnmount
+
+
+以上的生命周期，全部都包含相应的钩子函数
+
+二.数据流
+
+1.数据的流向是单向的－>从父节点传递到字节点，他们只需要从父节点获取props渲染即可，
+如果顶层组件的某个prop改变了，React会递归的遍历整个属性的组件。
+
+
+props：你只能在子组件上或者组件树外调用setProps千万别调用this.setProps,如果需要请使用state
+
+
+
+PropTypes：
+通过在组件中定义一个配置对象，react提供了一种验证props的方式
+
+
+var SurveyTableRow = React.createClass({
+    propTypes: {
+        // 检查其是否为函数
+        onClick: React.PropTypes.func
+    }
+})；
+
+
+
+State：
+每一个React组件都可以拥有自己的state，state和props的区别在于前者只存在于组件的内部
+
+修改的话，只能使用this.setState({
+    show: false
+});
+
+
+
+props当作数据源，只是只读的
+作为事件处理器，与子组件通信
+
+
+
+
+三.事件处理
+
+
+
+四.组件的复合的应用:
+
+
+五.mixin：多个组件公用一个方法
+
+
+六.dom的操作，ref是固定的，没有多个！
+
+
+
+这段时间加强这方面的学习，尤其是js方面的学习
+
+
+flux包含了三个组件：
+1.Dispatcher
+2.Store
+3.View
+
+
+Action是一个触发点，很好的理解这三个概念
