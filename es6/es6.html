@@ -130,3 +130,26 @@ var Person = {
 
 
 promise对象的使用
+
+
+ES6新的数据结构集
+Map  WeakMap
+
+Map:一个对象由多个 key-val 对构成，在 Map 中，任何类型都可以作为对象的 key
+
+
+
+WeakMap 就是一个 Map，只不过它的所有 key 都是弱引用，
+意思就是 WeakMap 中的东西垃圾回收时不考虑，
+使用它不用担心内存泄漏问题。
+
+*另一个需要注意的点是，WeakMap 的所有 key 必须是对象。
+它只有四个方法 delete(key),has(key),get(key) 和set(key, val)
+
+
+
+Set 对象是一组不重复的值，重复的值将被忽略，值类型可以是原始类型和引用类型：
+
+
+WeakSet
+类似于 WeakMap，WeakSet 对象可以让你在一个集合中保存对象的弱引用，在 WeakSet 中的对象只允许出现一次：

@@ -1,0 +1,22 @@
+20160715读css揭秘这本书的感受
+多用：em * 20 = px
+
+inherit： font-size,color, border,
+
+总的来说，我们的思路是尽最大努力实现弹性可伸缩的布局，并在媒体
+查询的各个断点区间内指定相应的尺寸。当网页本身的设计足够灵活时，让
+它变成响应式应该只需要用到一些简短的媒体查询代码。Basecamp 的设计
+师在2010 年写到过这种非常规情况。
+
+用一个div就可以实现
+外边为直角，那边距为圆角
+background: tan;
+border-radius: .8em;
+padding: 1em;
+box-shadow: 0 0 0 .6em #655;
+outline: .6em solid #655;
+// 多重边框
+box-shadow，outline，“多重边框”
+
+
+css3揭秘的学习
