@@ -284,3 +284,59 @@ javascript有哪些方法定义对象
     };
 数组去重:
 splice(0,1)
+slice数组的截取返回一个数组
+var slice = Array.prototype.slice
+// 无法打印这些值
+var myvar = "my value";
+(function() {
+  console.log(myvar);
+  var myvar = "local value";
+})();
+
+
+
+//数组的方法
+1.concat() 连接两个数组并返回一个新的数组。
+2.join()将数组的所有元素连接成一个字符串。
+3.push() 在数组末尾添加一个或多个元素，并返回数组操作后的长度。
+4.pop() 从数组移出最后一个元素，并返回该元素。
+5.shift() 从数组移出第一个元素，并返回该元素。
+6.unshift() 在数组开头添加一个或多个元素，并返回数组的新长度。
+7.slice(start_index, upto_index) 从数组提取一个片段，并作为一个新数组返回。
+8.splice(index, count_to_remove, addElement1, addElement2, ...)从数组移出一些元素，（可选）并替换它们。
+9.reverse() 颠倒数组元素的顺序：第一个变成最后一个，最后一个变成第一个。
+10.sort() 给数组元素排序。
+11.indexOf(searchElement[, fromIndex]) 在数组中搜索searchElement 并返回第一个匹配的索引。
+12.lastIndexOf(searchElement[, fromIndex]) 和 indexOf差不多，但是是从结尾开始，并且是反向搜索。
+13.forEach(callback[, thisObject]) 在数组每个元素项上执行callback。
+14.map(callback[, thisObject]) 在数组的每个单元项上执行callback函数，并把返回包含回调函数返回值的新数组。
+》译者注：也就是遍历数组，并通过callback对数组元素进行操作，并将所有操作结果放入数组中并返回该数组。
+15.filter(callback[, thisObject]) 返回一个包含所有在回调函数上返回为true的元素的新数组。
+》译者注：callback在这里担任的是过滤器的角色，当元素符合条件，过滤器就返回true，而filter则会返回所有符合过滤条件的元素。
+16.every(callback[, thisObject]) 当数组中每一个元素在callback上被返回true时就返回true。
+》译者注：同上，every其实类似filter，只不过它的功能是判断是不是数组中的所有元素都符合条件，并且返回的是bool值。
+17.some(callback[, thisObject]) 只要数组中有一项在callback上被返回true，就返回true。
+》译者注：同上，类似every，不过前者要求都符合筛选条件才返回true，后者只要有符合条件的就返回true。
+18.reduce(callback[, initialValue]) applies callback(firstValue, secondValue) to reduce the list of items down to a single value.
+19.reduceRight(callback[, initalvalue]) 和 reduce()相似，但是是从最后一个元素开始的。
+
+一.对象的使用，这对程序的理解至关重要
+1.for(var i in obj) {
+    if(obj.hasOwnProperty(i)) {
+        console.log(i);
+    }
+}
+2.判断对象是否有某个属性
+    从 ECMAScript 5 开始，有三种原生的方法用于列出或枚举对象的属性：
+    1.for...in 循环
+    该方法依次访问一个对象及其原型链中所有可枚举的属性。
+    2.Object.keys(o)
+    该方法返回一个对象 o 自身包含（不包括原型中）的所有属性的名称的数组。
+    3.Object.getOwnPropertyNames(o)
+    该方法返回一个数组，它包含了对象 o 所有拥有的属性（无论是否可枚举）的名称。
+3.定义 getter 与 setter
+    一个 getter 是一个获取某个特定属性的值的方法。
+    一个 setter 是一个设定某个属性的值的方法。
+    你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。
+    定义 getter 和 setter 的语法采用对象字面量语法。
+4.你可以用 delete 操作符删除一个不是继承而来的属性。

@@ -1,0 +1,62 @@
+一.一个jssdk一般是指提供给第三方人员使用的一段js，通过这个js实现一些平台化产品提供的服务，比如微博的jssdk。整个jssdk的设计有一下几个核心问题：
+1.代码如何被使用页面接入
+2.如何实现跨域通信
+3.如何实现优雅api的设计
+4.公共资源的使用
+5.代码组件化
+
+1.css的预处理:less =>css
+
+
+二.移动开发中的视觉规范化实践
+1.我相信有更多的元素可以规范化，例如cell、alert等等。
+    cell的规范化的争议也是最大的，一方认为cell没有必要规范化，另一方认为cell的规范化非常有必要。
+    cell规范化的长远利益在于一般的展示型app都是由tableview组成，
+    如果cell规范化做得好的话可以在客户端实现动态化，
+    服务端返回的数据只需要一个样式的数组和对应的数据，
+    客户端就可完成tableview的动态渲染。
+
+
+1.h5的缓存机制:
+    离线浏览 用户可在应用离线时使用它们
+    速度 已缓存资源加载得更快
+    减少服务器负载 浏览器将只从服务器下载更新过或更改过的资源。
+2.6种机制
+    浏览器缓存机制
+    Dom Storgage（Web Storage）存储机制
+    Web SQL Database 存储机制
+    Application Cache（AppCache）机制
+    Indexed Database （IndexedDB）
+    File System API
+1>浏览器层面的
+浏览器缓存机制是指通过 HTTP 协议头里的 Cache-Control（或 Expires）和 Last-Modified（或 Etag）等字段来控制文件缓存的机制。
+这应该是 WEB 中最早的缓存机制了，是在 HTTP 协议中实现的，有点不同于 Dom Storage、AppCache 等缓存机制，但本质上是一样的。
+可以理解为，一个是协议层实现的，一个是应用层实现的。
+2>Dom Storage 存储机制:
+    DOM Storage 分为 sessionStorage 和 localStorage。
+    localStorage 对象和 sessionStorage 对象使用方法基本相同，
+    它们的区别在于作用的范围不同。sessionStorage 用来存储与页面相关的数据，
+    它在页面关闭后无法使用。而 localStorage 则持久存在，在页面关闭后也可以使用。
+3>Web SQL Database存储机制:
+    H5 也提供基于 SQL 的数据库存储机制，用于存储适合数据库的结构化数据。
+    根据官方的标准文档，Web SQL Database 存储机制不再推荐使用，将来也不再维护，而是推荐使用 AppCache 和 IndexedDB。
+    现在主流的浏览器（点击查看浏览器支持情况）都还是支持 Web SQL Database 存储机制的。
+    Web SQL Database 存储机制提供了一组 API 供 Web App 创建、存储、查询数据库。
+4>Application Cache 机制
+    Application Cache（简称 AppCache)似乎是为支持 Web App 离线使用而开发的缓存机制。
+    它的缓存机制类似于浏览器的缓存（Cache-Control  和 Last-Modified）机制，
+    都是以文件为单位进行缓存，且文件有一定更新机制。
+    但 AppCache 是对浏览器缓存机制的补充，不是替代。
+5>Indexed Database（更倾向于使用该方式）
+    IndexedDB 也是一种数据库的存储机制，但不同于已经不再支持的 Web SQL Database。
+    IndexedDB 不是传统的关系数据库，可归为 NoSQL 数据库。
+    IndexedDB 又类似于 Dom Storage 的 key-value 的存储方式，但功能更强大，且存储空间更大。
+6>File System API
+    File System API 是 H5 新加入的存储机制。它为 Web App 提供了一个虚拟的文件系统，就像 Native App 访问本地文件系统一样。
+    由于安全性的考虑，这个虚拟文件系统有一定的限制。
+    Web App 在虚拟的文件系统中，可以进行文件（夹）的创建、读、写、删除、遍历等操作。
+    优势：
+    可以满足大块的二进制数据（ large binary blobs）存储需求。
+    可以通过预加载资源文件来提高性能。
+    可以直接编辑文件。
+缓存的优势，就是为了避免减少请求，使得页面快速的渲染。
