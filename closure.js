@@ -56,7 +56,7 @@ var createCommand =function(reciver){
 	var undo = function(){
 		return reciver.close();
 	}
-
+    // 返回一个对象
 	return {
 		excute:excute,
 		undo:undo

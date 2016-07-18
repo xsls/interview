@@ -23,7 +23,7 @@ add();
 
 5.undefined
 
-6.object	
+6.object
 
 window.name = 1111111;
 
@@ -63,9 +63,3 @@ function add (){
 
 
 2.原型链的理解
-
-
-
-
-
-

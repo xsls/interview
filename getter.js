@@ -8,6 +8,6 @@ var obj = {
 	},
 
 	set:function(name){
-		
+        this.name = name;
 	}
 };
