@@ -1,14 +1,14 @@
 // util的工具函数，实现继承
 var util = require('util'); 
-function Base() { 
-	this.name = 'base'; 
-	this.base = 1991; 
-	this.sayHello = function() { 
-	console.log('Hello ' + this.name); 
+function Base() {
+	this.name = 'base';
+	this.base = 1991;
+	this.sayHello = function() {
+	console.log('Hello ' + this.name);
 	}; 
 }
 // 原型模式
-Base.prototype.showName = function() { 
+Base.prototype.showName = function() {
 	console.log(this.name);
 }; 
 function Sub() { 
