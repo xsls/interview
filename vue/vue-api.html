@@ -2,7 +2,7 @@
 
 1.Vue.extend()
 
-2.Vue.use();//使用插件
+2.Vue.use(); // 使用插件
 
 3.vue-router(使用成功，配置好vue－router，分离组件出来)
 
@@ -68,3 +68,35 @@ v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"
 移动端使用vux
 
 pc端使用vue-strap
+
+一.项目过程中遇到的问题
+    destoryed()在页面切换的时候进行销毁
+    route: {
+        // 重新ready()的方法
+        canReuse (tran) {
+            if (tran.to.name === '' && tran.from.params.code !== tran.to.params.code) {
+                return false;
+            }
+            return true;
+        }
+    },
+    ready () {
+    },
+    data () {
+        return {
+            arrayList: []
+        };
+    },
+    // 异步的加载数据的处理
+    asyncData (resolve, reject) {
+        resolve({
+            arrayList: []
+        });
+    },
+    computed: {
+    },
+    methods: {
+    },
+    watch: {
+    }
+二.理解vuex中的全局的东西的解决
