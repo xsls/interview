@@ -1,0 +1,140 @@
+css属性简介:
+一.属性:
+1.定位的属性:
+    ->position:(top,right,bottom,left结合使用)
+    1.absolute
+    2.relative
+    3.fixed
+    4.static
+    5.center(css3)
+    6.page(css3)
+    7.sticky(css3)
+    ->z-index:
+    1.定位元素。即定义了position为非static的元素
+    ->clip
+    1.适用于：绝对定位元素
+    2.默认值：auto,对象不剪切
+    3.rect(): clip:rect(auto 50px 20px auto)
+2.布局的属性:
+    ->display:
+    1.none:隐藏对象。与visibility属性的hidden值不同，其不为被隐藏的对象保留其物理空间
+    2.inline:指定对象为内联元素
+    3.block:指定为块级元素
+    4.inline-block:指定对象为内联块元素
+    5.flex:将对象作为弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
+    6.inline-flex:将对象作为内联块级弹性伸缩盒显示。（伸缩盒最新版本）（CSS3）
+    ->float:
+    1.none
+    2.left
+    3.right
+    ->clear:
+    1.none
+    2.both
+    3.left
+    4.right
+    ->visibility:
+    1.visible
+    2.hidden
+    3.collapse
+    ->overflow:
+    1.visible:对溢出内容不做处理，内容可能会超出容器。
+    2.hidden:隐藏溢出容器的内容且不出现滚动条。
+    3.scroll:隐藏溢出容器的内容，溢出的内容将以卷动滚动条的方式呈现。
+    4.auto:当内容没有溢出容器时不出现滚动条，当内容溢出容器时出现滚动条，按需出现滚动条。此为body对象和textarea的默认值。
+3.尺寸属性:
+    ->width:
+    1.auto
+    2.length
+    3.percentage
+    ->min-width:
+    1.auto
+    2.length
+    3.percentage
+    ->max-width:
+    1.auto
+    2.length
+    3.percentage
+    ->height:
+    1.auto
+    2.length
+    3.percentage
+    ->max-height:
+    1.auto
+    2.length
+    3.percentage
+    ->min-height:
+    1.auto
+    2.length
+    3.percentage
+4.外边距属性:
+    ->margin:
+    1.margin-left
+    2.margin-right:
+    3.margin-top:
+    4.margin-bottom:
+5.内边距属性:
+    ->padding:
+    1.padding-top:
+    2.padding-right:
+    3.padding-left:
+    4.padding-bottom:
+6.边框属性:
+    ->border:
+    1.border-width:边框宽度
+    2.border-style:边框颜色 边框宽度 边框轮廓
+    3.border-color:#ccc
+    4.border-top:
+    5.border-bottom:
+    6.border-left:
+    7.border-right:
+    8.border-radius:圆角边框(正方形画圆大于起50%)
+    9.box-shadow:(x,y,对象的阴影模糊值,对象的阴影外延值,设置对象的阴影的颜色,设置对象的阴影类型为内阴影)
+    ->border-image(用的比较少)
+    1.border-image-source
+    2.border-image-slice
+    3.border-image-width
+    4.border-image-outset
+    5.border-image-repeat
+7.背景
+    ->background
+    1.background-color
+    2.background-image
+    3.background-repeat
+    4.background-attachment
+    5.background-position
+    6.background-origin
+    7.background-clip
+    8.background-size
+8.颜色:
+    ->color:
+    1.指定颜色值
+    ->opacity:
+    1.透明度(0-1或者0-100)
+9.字体
+    ->font:
+    1.font-style:文本字体样式
+    2.font-variant:指定文本是否为小型的大写字母
+    3.font-weight:指定文本字体的粗细
+    4.font-size:指定文本字体尺寸
+    5.line-height:指定文本字体的行高
+    6.font-family:指定文本使用某个字体或字体序列
+    7.font-stretch(CSS3)
+    8.font-size-adjust(CSS3)
+10.文本:
+    ->text-transform:
+    1.将所有字符转换成fullwidth形式。如果字符没有相应的fullwidth形式，将保留原样。这个值通常用于排版拉丁字符和数字等表意符号。（CSS3）
+    ->white-space:
+    1.nowrap:强制在同一行内显示所有文本，合并文本间的多余空白，直到文本结束或者遭遇br对象（使用较多）
+    2.tab-size:
+    3.word-break:
+    4.word-wrap:
+    5.overflow-wrap:
+    6.text-align:
+    7.text-algin-last
+    8.text-justify
+    9.word-spacing
+    10.letter-spacing
+    11.text-ident
+    12.vertical-algin:
+    13.line-height
+    14.text-size-adjust
