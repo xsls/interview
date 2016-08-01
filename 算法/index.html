@@ -1,0 +1,56 @@
+斐波那契数列(递归的使用,比较耗性能)
+例子：算法的使用
+1,1,2,3,5,8,13,21,34,55,89......
+var x = 0;
+function fact(n) {
+    x++;
+    console.log('x', x);
+    if(n <= 2) {
+        return 1;
+    } else {
+        return fact(n-1) + fact(n-2);
+    }
+}
+fact(3);
+
+代码的精简:
+function fact(n) {
+    var result = 0;
+    result = n <= 2 ? 1:fact(n-1) + fact(n-2);
+    return result;
+}
+// 阶层的算法
+var x = 0;
+function fact(n) {
+    x++;
+    console.log(x);
+    if(n <= 1){
+        return 1;
+    } else {
+        return fact(n-1) * n;
+    }
+}
+fact(5);
+
+代码的精简:
+function fact(n) {
+    var result = 0;
+    result = (n <= 1 && n >= -1)? 1:fact(n-1) * n;
+    return result;
+};
+冒泡算法
+二分算法
+一.数据结构
+栈(先进后出),队列(先进先出),链表（单链表,双链表,循环链表）
+代码的重构:
+1.不要写重复的代码
+2.写精简的代码
+3.箭头函数的使用
+4.使用语言自带的函数(利用语言特性)
+
+
+提高英语的学习，这样可以很好的理解技术方面的知识
+
+
+睡觉前学习200个单词
+早上起来看算法和大数据的书
