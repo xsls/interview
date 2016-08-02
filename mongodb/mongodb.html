@@ -16,3 +16,18 @@ sudo mongod(服务的启动)
 后台运行：可以使用db.shutdownServer()关闭服务
 
 三.基本的配置mongodb服务
+
+// post的使用
+post = {
+    title: 'bolg',
+    content: 'this is very good ideal',
+    date: new Date()
+};
+
+db.users.find().limit(1);
+db.users.find().skip(2);
+db.users.find().sort();// 默认排序
+
+四.设计应用：
+    1.mongodb索引的使用:
+    ->索引可以优化查询
