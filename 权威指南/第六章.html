@@ -1,1 +1,40 @@
 一.对象知识的总结
+   ->创建
+   ->设置
+   ->查找
+   ->删除
+   ->检测
+   ->枚举
+属性的查询和设置:
+    var author = book.author;
+    var name = author.surname;
+    var title = book["main title"];
+    object.property;
+    object['property'];
+删除属性:
+    delete book.author;
+    delete book['main title'];
+    delete运算符职能删除自有属性，不能删除继承属性
+    delete Object.prototype; 不能删除，属性是不可用配置的
+检测属性:
+    in运算符
+    hasOwnPreperty()检测自有属性
+    propertyIsEnumerable()检测自有可枚举属性
+属性getter和setter
+
+对象的三个属性:
+    原型属性
+    类属性
+    可扩展性
+序列化对象(p为o的深拷贝)
+    var o = {};
+    s = JSON.stringify(o);
+    p = JSON.parse(s);
+对象方法:
+    hasOwnProperty()
+    propertyIsEnumerable()
+    isPrototypeOf()
+    toString()
+    toLocaleString()
+    toJSON()
+    valueOf()
