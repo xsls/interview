@@ -1,7 +1,9 @@
 const mongo = require('mongodb');
 const host = 'localhost';
 const port = 27017;
+// 服务
 const server = new mongo.Server(host, port, {auto_reconnect: true});
+// 数据库
 const db = new mongo.Db('database', server, {safe: true});
 db.open((err, db) => {
     if (err) {
