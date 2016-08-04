@@ -51,7 +51,7 @@
 //     })
 // });
 // server.listen(8431, 'localhost');
-// =>例子5
+// =>例子5  es2015的语法深入人心
 const net = require('net');
 // 创建一个写文件夹的文件流
 const file = require('fs').createWriteStream('./message.txt');
@@ -64,7 +64,7 @@ server.on('connection', (socket) => {
     });
     socket.pipe(file, {end:false});
     setTimeout(() => {
-        file.end('zaijian222222211111');
+        file.end('zaijian');
         socket.unpipe(file);
     }, 50000)
 });
