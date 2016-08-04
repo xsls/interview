@@ -60,6 +60,7 @@ server.on('connection', (socket) => {
     socket.setEncoding('utf8');
     socket.on('data', (data) => {
         console.log('data', data);
+        console.log('socket', socket);
         console.log('接受的数据', socket.bytesRead);
     });
     socket.pipe(file, {end:false});
