@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ccc
 ddddd
 dddddd
@@ -11,8 +11,3 @@ dddddd
 
 
 000000000
-=======
-222
-22222
->>>>>>> master
-zaijian
