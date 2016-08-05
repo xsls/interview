@@ -1,0 +1,13 @@
+一.vue-router:基本的概念
+    ->安装和使用
+        let Vue = require('vue')
+        let VueRouter = require('vue-router')
+        Vue.use(VueRouter)
+    ->基本的用法:
+    let router = new VueRouter();
+    router.map({
+        '/app': {
+            name: 'app',
+            component: App
+        }
+    });
