@@ -14,12 +14,10 @@ db.open((err, db) => {
     } else {
         console.log('success');
         // db.close();
-        // 插入数据库的数据
         db.collection('users', (err, collection) => {
             let data = {name222222: '聂玉林2222', firstName222: '小欢2222'};
             collection.insert(data, (err, docs) => {
                 console.log(docs);
-                // db.close();
                 // db.close();
             });
         });
@@ -30,7 +28,6 @@ db.on('close', (err, db) => {
     if (err) {
         throw err
     } else {
-        //什么时候提高自己的代码
         console.log('成功关闭数据库');
     }
 });

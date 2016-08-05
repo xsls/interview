@@ -14,3 +14,5 @@ arr.slice(0,1);
 
 slice.call(arr, 0, 1);
 slice.apply(arr, [0,1]);
+
+// vuejs的重度使用者

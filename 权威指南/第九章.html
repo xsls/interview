@@ -1,0 +1,22 @@
+一.20160803类和模块
+    ->类和构造函数
+    function Rang(name,age){
+        this.name = name;
+        this.age = age;
+    };
+    Rang.prototype = {
+        includes: function() {
+            return this.name;
+        },
+        getAge: function() {
+            return this.age;
+        }
+    };
+    var rang = new Rang(10,20);
+    rang.includes();
+    rang.getAge();
+    -> 构造函数和类的标识
+    构造函数的prototype属性指向同一个对象，这就说明他们属于同一个类
+    ->constructor属性
+    ->instanceof
+    ->模块化
