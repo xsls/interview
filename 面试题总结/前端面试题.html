@@ -340,3 +340,32 @@ var myvar = "my value";
     你可以为预定义的或用户定义的对象定义 getter 和 setter 以支持新增的属性。
     定义 getter 和 setter 的语法采用对象字面量语法。
 4.你可以用 delete 操作符删除一个不是继承而来的属性。
+
+
+一.支付宝的面试题
+1.深浅拷贝
+2.react
+3.react-native
+4.vue
+5.原生的js
+6.github
+7.基本的数据类型: null undefined object string number boolean
+8.null和undefined
+9.数组的一些操作方法 push pop shift unshift slice splice indexof lastIndex
+10.typeof null === object
+11.instanceof
+12.数据的操作方法
+
+1.深浅拷贝(进行stringify和parse)
+var o = {
+	x: 1,
+	y: {
+		z: [false, null, '']
+	}
+};
+<!-- 先进行stringify,在进行parse -->
+var s = JSON.stringify(o);
+
+p = JSON.parse(s);
+
+console.log(o, p);

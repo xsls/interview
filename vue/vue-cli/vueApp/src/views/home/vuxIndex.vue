@@ -19,6 +19,12 @@ export default {
         return {
             msg: 'Hello World!'
         };
+    },
+    asyncData (resolve, reject) {
+        window.console.log('this', this.msg);
+    },
+    ready () {
+        console.log('this', this);
     }
 };
 </script>
