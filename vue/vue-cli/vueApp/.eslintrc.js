@@ -23,6 +23,7 @@ module.exports = {
     }],
     'no-console': 1,
     'eol-last': 0,
+    // 后面加分号
     'semi': [2, "always"]
   }
 }
