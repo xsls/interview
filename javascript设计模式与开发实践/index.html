@@ -1,0 +1,77 @@
+1.this call apply的深度学习
+	function.prototype.call
+	function.prototype.apply
+2.闭包和高阶函数的使用
+3.闭包实现命令模式
+	＝>
+	// 将方法定义在对象中
+	const Tv = {
+		open: function (){
+			console.log('打开电视机');
+		},
+		close: function () {
+			console.log('关上电视机')
+		}
+	};
+	// 开关的命令,接受一个对象
+	const OpenTvCommand = function(receiver) {
+		this.receiver = receiver;
+	}
+	// 开
+	OpenTvCommand.prototype.execute = function() {
+		this.receiver.open();
+	};
+	// 关
+	OpenTvCommand.prototype.undo = function() {
+		this.receiver.close();
+	};
+	// 设置命令
+	var setCommand = function(command) {
+		//command.undo();
+		command.execute();
+	};
+	// 很经典的例子
+	setCommand(new OpenTvCommand(Tv));
+4.高阶函数
+	Function.prototype.before = function( beforefn ){
+		var __self = this; // 保存原函数的引用
+		return function(){ // 返回包含了原函数和新函数的"代理"函数
+			beforefn.apply( this, arguments ); // 执行新函数，修正this
+			return __self.apply( this, arguments ); // 执行原函数
+		}
+	};
+	Function.prototype.after = function( afterfn ){
+		var __self = this;
+		return function(){
+			var ret = __self.apply( this, arguments );
+			afterfn.apply( this, arguments );
+			return ret;
+		}
+	};
+	var func = function(){
+		console.log( 2 );
+	};
+	func = func.before(function(){
+		console.log( 1 );
+	}).after(function(){
+		console.log( 3 );
+	});
+	func();
+5.单例模式
+	let Singleton = function (name) {
+		this.name = name;
+	};
+	Singleton.prototype.getName = function(){
+		alert ( this.name );
+	};
+	Singleton.getInstance = (function(){
+		var instance = null;
+		return function( name ){
+			if ( !instance ){
+				instance = new Singleton( name );
+			}
+			return instance;
+		}
+	})();
+6.策略模式
+	
