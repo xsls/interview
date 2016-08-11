@@ -1,0 +1,31 @@
+一.nodejs的进程
+	=>.进程的属性
+		1.version
+		2.versions
+		3.platform
+		4.stdin
+		5.stdout
+		6.stderr
+		7.argv:process.argv.forEach((val, index, array) => (console.log(index,val)))
+		8.env
+		9.config
+		10.pid
+		11.title: process.node
+		12.arch
+	=>.进程对象的方法和事件
+		1.memoryUsage办法:用于获取运行nodejs应用程序的进程的内存使用量,process.memoryUsage(rss:内存消耗量,heapTotal:v8所分配的内存量,heapUsed:v8内存的消耗量)
+		2.nextTick方法:process.nextTick(callback)
+二.创建多线程应用程序
+	=>.使用spawn方法开启子进程
+		1.child_process.spawn(command(必传参数), [argv], [options]);
+	=>.使用fork方法开启子进程
+		1.child_process.fork(modulePath(必传参数, 模块文件路径及文件名), [args], [options])
+	=>.使用exec方法开启子进程
+		1.child_process.exec(command, [options], [callback])
+	=>.使用execFile方法开启子进程
+		1.child_process.execFile(file, [args], [options], [callback])
+三.在多个子进程中运行nodejs应用程序(cluster)
+	=>.使用fork方法创建worker对象
+		1.cluster.fork([env])
+四.worker对象的方法和事件
+

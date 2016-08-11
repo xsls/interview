@@ -52,21 +52,44 @@
 // });
 // server.listen(8431, 'localhost');
 // =>例子5  es2015的语法深入人心
-const net = require('net');
+//const net = require('net');
 // 创建一个写文件夹的文件流
-const file = require('fs').createWriteStream('./message.txt');
+// const file = require('fs').createWriteStream('./message.txt');
+// const server = net.createServer();
+// server.on('connection', (socket) => {
+//     socket.setEncoding('utf8');
+//     socket.on('data', (data) => {
+//         console.log('data', data);
+//         console.log('socket', socket);
+//         console.log('接受的数据', socket.bytesRead);
+//     });
+//     socket.pipe(file, {end:false});
+//     setTimeout(() => {
+//         file.end('zaijian');
+//         socket.unpipe(file);
+//     }, 50000)
+// });
+// server.listen(8431, 'localhost');
+
+
+
+
+const net = require('net');
 const server = net.createServer();
-server.on('connection', (socket) => {
+const fs = require('fs');
+server.on('connection', function(socket) {
+    console.log('客服端与服务器建立连接');
     socket.setEncoding('utf8');
-    socket.on('data', (data) => {
-        console.log('data', data);
-        console.log('socket', socket);
-        console.log('接受的数据', socket.bytesRead);
+    const readStream = fs.createReadStream('./fs.js');
+    readStream.on('data', function(data) {
+        const flag = socket.write(data);
+        console.log('socket', socket.bufferSize);
     });
-    socket.pipe(file, {end:false});
-    setTimeout(() => {
-        file.end('zaijian');
-        socket.unpipe(file);
-    }, 50000)
+    socket.on('data', function(data) {
+        console.log('已经客户端发送数据');
+    }); 
+    socket.on('drain', function() {
+        console.log('tcp缓存区中的数据已全部发送');
+    });
 });
-server.listen(8431, 'localhost');
+server.listen(8431, '127.0.0.1');
