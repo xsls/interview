@@ -67,7 +67,7 @@
 //     setTimeout(() => {
 //         file.end('zaijian');
 //         socket.unpipe(file);
-//     }, 50000)
+//     }, 5000)
 // });
 // server.listen(8431, 'localhost');
 
@@ -87,7 +87,7 @@ server.on('connection', function(socket) {
     });
     socket.on('data', function(data) {
         console.log('已经客户端发送数据');
-    }); 
+    });
     socket.on('drain', function() {
         console.log('tcp缓存区中的数据已全部发送');
     });

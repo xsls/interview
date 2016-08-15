@@ -3,19 +3,15 @@
 const mongo = require('mongodb');
 const host = 'localhost';
 const port = 27017;
-// 服务
 const server = new mongo.Server(host, port, {auto_reconnect: true});
-// 数据库
 const db = new mongo.Db('database', server, {safe: true});
-// 打开数据库的应用
 db.open((err, db) => {
     if (err) {
         throw err
     } else {
         console.log('success');
-        // db.close();
         db.collection('users', (err, collection) => {
-            let data = {name222222: '聂玉林2222', firstName222: '小欢2222'};
+            let data = {name222222: '聂玉林', firstName222: '小欢'};
             collection.insert(data, (err, docs) => {
                 console.log(docs);
                 // db.close();
