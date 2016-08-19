@@ -15,7 +15,6 @@ class Student(object):
 		print(self.name)
 	def getAge (self):
 		print(self.age)
-
 s = Student('nyl', 27)
 s.getAge()
 s.getName()
