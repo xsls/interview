@@ -1,5 +1,6 @@
 // 启动服务:sudo mongod
 // 查看数据库:mongo
+// 查看更多数据
 const mongo = require('mongodb');
 const host = 'localhost';
 const port = 27017;
@@ -11,7 +12,7 @@ db.open((err, db) => {
     } else {
         console.log('success');
         db.collection('users', (err, collection) => {
-            let data = {name222222: '聂玉林', firstName222: '小欢'};
+            let data = {name: '聂玉林', firstName: '明珠'};
             collection.insert(data, (err, docs) => {
                 console.log(docs);
                 // db.close();

@@ -32,3 +32,43 @@ var p = {
 
 
 Symbol和Proxy的实际用处
+
+
+
+Map和Set的区别
+map: key-val
+set:特殊的数组，会过滤掉重复的元素
+
+Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。
+
+遍历Array可以采用下标循环，遍历Map和Set就无法使用下标。为了统一集合类型，ES6标准引入了新的iterable类型，Array、Map和Set都属于iterable类型。
+
+'use strict';
+var a = [1, 2, 3];
+for (var x of a) {
+	console.log(x);
+}
+
+JavaScript的函数其实都指向某个变量。既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。
+简单的高阶函数
+	function add(x, y, f) {
+	    return f(x) + f(y);
+	}
+箭头函数的使用:
+	arr.map((x) => {
+		console.log('x', x);
+	});
+// generator
+function* fun(x=> {
+	return x;
+})
+try {
+    r1 = yield ajax('http://url-1', data1);
+    r2 = yield ajax('http://url-2', data2);
+    r3 = yield ajax('http://url-3', data3);
+    success(r3);
+}
+catch (err) {
+    handle(err);
+}
+

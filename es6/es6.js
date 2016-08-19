@@ -31,7 +31,7 @@ let childPoint = new SuperPoint(1, 2, 'red');
 console.log(childPoint.toString());
 
 
-// generator
+// generator,可以少些很多回调函数
 function* generator () {
 	yield 'hello';
   	yield 'world';
