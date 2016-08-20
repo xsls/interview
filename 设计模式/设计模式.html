@@ -11,27 +11,33 @@ mongodb的学习，提高自己的技能
     2> koa + webpack + react + es6
 
 1.单例模式
-var Singleton = function(name) {
-    this.name = name;
-    this.instance = null;
-};
+	var Singleton = function(name) {
+	    this.name = name;
+	    this.instance = null;
+	};
 
-Singleton.prototype.getName = function() {
-    console.log(this.name);
-};
-Singleton.getInstance = function(name) {
-    if(!this.instance) {
-        this.instance = new Singleton(name);
-    }
-    return this.instance;
-};
+	Singleton.prototype.getName = function() {
+	    console.log(this.name);
+	};
+	Singleton.getInstance = function(name) {
+	    if(!this.instance) {
+	        this.instance = new Singleton(name);
+	    }
+	    return this.instance;
+	};
 
-var a = Singleton.getInstance('sven1');
-var b = Singleton.getInstance('sven2');
-console.log(a === b);
+	var a = Singleton.getInstance('sven1');
+	var b = Singleton.getInstance('sven2');
+	console.log(a === b);
+
+2.代理模式
 
 
+3.外观模式
 
 
-//代码重用性高
+4.适配器模式
+
+
+5.装饰者模式
 
