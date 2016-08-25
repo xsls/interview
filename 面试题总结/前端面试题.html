@@ -1,12 +1,11 @@
 var a =10;
 function add () {
-    a = 100; // 内部的全局变量
+    a = 100;
     console.log(a);
-    console.log(this.a); // this代表window
-    var a ; // 内部变量前置
-    console.log(a); ／／ 100
+    console.log(this.a);
+    var a ;
+    console.log(a);
 }
-
 1.闭包的理解
 
 2.webpack
