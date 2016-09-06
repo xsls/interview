@@ -1,0 +1,112 @@
+linux guide for develops
+1.软件安装
+2.终端配置
+3.用户权限
+4.重定向
+5.搜索
+6.进程
+7.网络操作
+8.脚本
+适合编辑器和命令行终端
+
+python，php，ruby
+
+
+开发者的指南
+
+选择操作系统
+设置终端
+ubuntu(互联网公司)
+不仅仅是流行的服务器平台
+也是优秀的个人平台
+
+control+l清屏或者clear
+作为开发者，怎么学习linux
+
+Tutorial
+
+
+man 具体的命令
+
+
+
+再文件系统中的跳转：
+1.文件系统树结构
+2.绝对路径和相对路径
+3.cd命令
+分区和挂载点，跟目录/
+一个倒挂的树： root directory  pwd
+相对路径的表示方法：
+.:current working dir
+..:parent dir of current working dir
+cd: change dir
+小技巧的补充:tab的补充
+
+操作文件和目录
+1.走马观花看指令
+2.通配符
+3.打包压缩
+
+
+下载文件
+
+wget http://imooc.com
+
+查看文件类型: file 文件名字
+
+less index.html(作为分页)
+通配符：*
+
+
+打包压缩的总结
+zip -r 文件.zip 源文件
+
+tar 对应的文件格式的不一样，命令也不一样
+
+
+重定向
+1.三个重要的文件
+2.重定向的各种方式
+3.管道线
+
+标准输入，标准输出，标准错误文件  0，1，2
+> <
+
+分隔符是｜，管道线就是linux命令的基石
+cat命令的使用
+
+权限问题
+
+
+control+a最开始
+control＋e
+
+
+
+三种权限：读写执行权限
+文件模式
+chmod
+
+
+进程的命令:
+1.获取进程号
+ps aux|less
+ps aux|grep vim
+
+kill命令：结束进程
+
+
+查找命令
+locate:所有的文件
+find：当前目录下查找文件
+grep：字符串的查找
+
+updatedb更新数据库，locate查找刚刚创建的命令
+sudo updatedb
+
+
+
+网络操作系统
+
+1.远程操作：ssh  22号端口
+2.数据传输: rsync
