@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>用户登录——156.com 壹物流</title>
+<meta name="author" content="chenchuang@chunyu.com" />
+<meta name="keywords" content="156.com，壹物流" />
+<meta name="description" content="156.com 壹物流 重卡物流服务整合平台" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<style>
+body, div, p, h1, h2, h3, h4, h5, h6, hr, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+body, button, input, select, textarea { font:normal 12px/1 microsoft yahei,"\5b8b\4f53", Tahoma, Helvetica, Arial, sans-serif; line-height:22px }
+textarea { resize:none ; }
+table { border-collapse:collapse; border-spacing:0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+h1 { font-size:18px }
+h2 { font-size:16px }
+h3 { font-size:14px }
+h4, h5, h6 { font-size:100% }
+a { text-decoration:none; outline: none; color:#464646; }
+a:hover { text-decoration:underline }
+input, button, textarea { outline:none }
+fieldset, img { border:0 }
+ul, ol { list-style:none }
+.fl { float:left; display:inline; }
+.fr { float:right; display:inline; }
+.cl { clear:both }
+.pr { position: relative; z-index: 10 }
+.pa { position: absolute; z-index: 20 }
+.pf { position: fixed; _position:absolute; z-index: 9999}
+.br3 { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.br6 { -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+.br10 { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.hide { display:none !important;}
+.block { display:block !important;}
+.invisible { visibility: hidden; }
+.visible { visibility: visible; }
+.text-split { display: inline-block; white-space: nowrap; word-wrap: normal; width: 100%; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; text-overflow: ellipsis; }
+.curhand { cursor: pointer; }
+.clearfix:after { visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0 }
+.clearfix { *zoom:1}
+.innerwp { width: 1000px; min-width: 1000px; margin:0 auto; }
+.icon { background: url(img/ico-sprite.png) no-repeat 0 0; display: inline-block; overflow: hidden; vertical-align: middle; }
+.i14 { width: 14px; height: 14px }
+.i16 { width: 16px; height: 16px }
+.num-san { width: 0px; height: 0px; overflow: hidden; border-top: solid 5px rgba(141,142,144,.6); border-left: solid 6px transparent; border-right:solid 6px transparent; }
+.ico-backto { background-position: -297px -3px; left: -24px; top: 5px }
+.ico-user, .ico-pwd { left: 15px; top: 15px; background-position:-2px -21px }
+.ico-pwd { background-position: -43px -23px }
+.focus .ico-user { background-position:-23px -21px; }
+.focus .ico-pwd { background-position:-64px -23px; }
+.ico-warning { background-position: -87px -24px; top: 50%; margin-top: -7px; right: 7px }
+.ico-ok { background-position: -3px -45px; margin-right: 5px }
+div.pr .ico-ok { top: 50%; margin-top: -7px; right: 7px; margin-right: 0 }
+div.pr { display:inline-block;zoom:1;*display:inline }
+/*——登陆注册头部样式——*/
+.logreg { background: url(img/logreg-bg.jpg) repeat-x 0 0; }
+.logreg .header { background: none; height: 150px }
+.logreg .logo { width: 290px; height: 32px; margin: 50px 0 65px; overflow:hidden }
+.logreg .logo a { display: block; text-indent: -9999px; background: url(img/logreg-logo.png) no-repeat 0 0; height: 32px }
+.logreg .hdlinks { width: 30px; margin-top: 5px }
+.logreg .hdlinks a { height:24px; line-height:24px; display: block; position: relative; }
+.logregmap { background: url(img/mapbg.jpg) no-repeat center 0; }
+/*——登陆注册底部样式——*/
+.logreg .footer { height:auto; background: #f1f1f1 url(img/ftbg.jpg) no-repeat center 0; border:0; color:#666}
+.logreg .footer .copyright { margin:10px 0; width:500px; line-height:26px }
+.logreg .footer .innerwp { padding:27px 0 22px }
+.ftlogo { display:inline-block; width:77px; height:19px; margin-right:10px; overflow:hidden; background:url(img/156.png) no-repeat 0 0; vertical-align:middle }
+.ftlogo strong { display:none }
+.logreg .appdown { margin:0 }   
+.appdown { background: url(img/appstore.png) no-repeat 0 0; display: block; width: 102px; height: 40px; text-indent: -9999px; margin-top: 5px }
+.appdown:hover { background-position:0 -41px }
+/*——用户登录注册样式——*/
+.logreg-main { background: url(img/logreg-rec.png) no-repeat 0 0; width: 830px; height: 477px; margin:0 auto 90px; }
+.logregwp { padding: 42px 34px 46px 74px; position:relative }
+.regright { height: 244px; width: 280px; overflow: hidden; padding-left:34px; padding-right:40px; border-left: solid 1px #d4d7dc; }
+.logreg-hd { font-family: microsoft yahei; height: 26px; padding:46px 74px 10px }
+.logregwp .logreg-hd { padding:0 }
+.erroinfo { color:#8e8f91; padding:5px 10px; width:662px; border:solid 1px #f8cb87; background:#fdefe4; position:absolute; z-index:200; top:30px; left:74px; opacity:0 }
+.erroinfo i { margin-right:10px; margin-top:0px; top:0; right:0; vertical-align:text-top }
+.loginform { width:330px; padding-right:34px }
+.logreg-hd .logreg-tit { font-size: 22px; font-weight: normal; color: #464646; letter-spacing: 3px; float: left;}
+.logeng { color: #8c8f93; display: block; margin-top: 4px; float: left; display: inline; margin-left: 10px}
+.btn-blue-long,.btn-i-blue {width: 330px; height: 42px; text-align: center; background:url(img/btn-blue-long.png) no-repeat 0 0; border:0; cursor: pointer; font: 18px/30px microsoft yahei; color:#fff;}
+.btn-blue-long:hover { background-position: 0 -43px }
+.btn-blue-long:active { background-position: 0 -86px }
+.btn-disable,.btn-disable:hover { background-position: 0 -86px; cursor:text ; }
+.regright p { color: #8c8f93;height: 48px; line-height: 24px; margin-top: 10px; margin-bottom: 120px}
+.logreglist { height: 195px; padding-top:4px}
+.logreglist li { margin-bottom: 17px; }
+.logreglist .logvali { margin-bottom: 10px }
+.logtxtbox,.regtxtbox { width: 238px; height: 14px; padding: 14px 45px; line-height: 14px; font-size: 14px; color: #464646; border:solid 1px #d3d6db;  -webkit-box-shadow: inset 0 2px 2px #ededed;-moz-box-shadow: inset 0 2px 3px #ededed;box-shadow: inset 0 2px 3px #ededed;}
+.logtxtbox:focus,.focus .logtxtbox,.regtxtbox:focus,.txtbox:focus,.dialog-table input:focus,.uc-addcar .addcar-box input:focus{ background-color: #ebf5ff; border-color:#7bb3ff; -webkit-box-shadow: 0 0 3px #7bb3ff;-moz-box-shadow: 0 0 5px #7bb3ff;box-shadow: 0 0 5px #7bb3ff; }
+.txtwarning,.focus .txtwarning { background:#fff; border-color:#f60;-webkit-box-shadow: 0 0 3px #f60,inset 0 2px 2px #ededed;-moz-box-shadow: 0 0 5px #f60,inset 0 2px 2px #ededed;box-shadow: 0 0 5px #f60,inset 0 2px 2px #ededed;  }
+.regtxtbox {width: 178px; height: 15px; line-height:15px; padding: 5px 10px; font-size:12px}
+.logvalitxt { width: 98px; font-size: 15px; font-family: arial; color: #434343 }
+.valibox { width: 106px }
+.vali-img { display: inline-block; width: 60px; height: 25px; line-height: 25px; color: #fff; text-align: center; background-color: #333; margin:0 10px; vertical-align: top; margin-top:1px; }
+.logreglist li.logvali a { color: #1d75c3 }
+.wntext { background:rgba(141,142,144,.6); height: 28px; line-height: 28px;  white-space: nowrap; top: -27px; right: 0; color: #fff; padding: 0 10px  }
+.wntext .num-san { top: 27px; right: 8px  }
+.wntext a { color:#1d75c3; margin-left:3px }
+.btn-i-blue { width: 126px; height: 40px; line-height:40px; background:url(img/btn-blue.png) no-repeat 0 0;}
+.btn-i-blue:hover { background-position: 0 -40px}
+.btn-i-blue:active { background-position: 0 -80px}
+.ck-vt { vertical-align:text-top }
+.btn-i-blue a { display:block; color:#fff; padding-left:8px }
+.btn-i-blue a:hover { text-decoration:none }
+.lab-reme { display:inline-block; height:20px; vertical-align:top }
+</style>
+<!--[if lte IE 6]><script language="javascript" src="lib/DD_belatedPNG.js"></script><![endif]-->
+</head>
+
+<body>
+<div class="logreg">
+  <div class="logregmap"> 
+    <!--头部版块 -->
+    <div class="header">
+      <div class="innerwp clearfix">
+        <div class="logo fl"><a href="" title="156整车服务物流平台">156整车服务物流平台</a></div>
+        <div class="hdlinks fr"> <a href=""><i class="icon i14 ico-backto pa"></i>返回</a> </div>
+      </div>
+    </div>
+    <!--中间板块 -->
+    <div class="container clearfix">
+      <div class="innerwp"> 
+        <!--登录注册板块 -->
+        <div class="logreg-main"> 
+        <div class="logreg-hd">
+              <h1 class="logreg-tit">登录</h1>
+              <em class="logeng">Login</em> </div>
+        <div class="logregwp clearfix">
+          <!--登录板块 -->
+          <p class="erroinfo"><i class="icon i14 ico-warning"></i>该账号已被系统锁定，请更换其他账号重试登录！如有疑问，欢迎致电客服400-888-8888。</p>
+          <!--登录板块 -->
+          <div class="loginform fl">
+            <div class="logreg-bd">
+              <div class="logregfm">
+                <form action="" class="logregfm">
+                  <ul class="logreglist">
+                    <li>
+                      <div class="pr"><i class="icon i16 ico-user pa"></i><!--文本框错误，增加类 txtwarning --><input type="text" name="logname" id="logname" class="logtxtbox br3" value="testaccount">
+                        <!--<i class="icon i14 ico-warning pa"></i><strong class="wntext br3 pa">用户名不存在<i class="num-san pa"></i></strong> --></div>
+                    </li>
+                    <li>
+                      <div class="pr"><i class="icon i16 ico-pwd pa"></i>
+                        <input type="password" name="logpwd" id="logpwd" class="logtxtbox br3" value="请输入密码">
+                      </div>
+                    </li>
+                    <li class="logvali">
+                      <div class="pr"><input type="text" name="valicode" id="valicode" class="regtxtbox logvalitxt br3" value="1391"><i class="icon i14 ico-warning pa"></i><strong class="wntext br3 pa">请输入验证码<i class="num-san pa"></i></strong></div>
+                      <span class="vali-img">图片预留</span><a href="">换一张</a></li>
+                    <li><span class="fr"><a href="">忘记密码</a> ？</span>
+                      <input type="checkbox" checked="checked" name="ck-agree" id="ck-agree" class="ck-vt" />
+                      <label for="ck-agree" class="ftblue lab-reme">记住我</label>
+                    </li>
+                  </ul>
+                  <p class="logregbtm">
+                    <button class="btn-blue-long" title="点击登录">登录</button>
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!--注册版块 -->
+          <div class="regright fr">
+            <div class="logreg-hd">
+              <h1 class="logreg-tit">免费注册</h1>
+              <em class="logeng">Create your account</em> </div>
+            <div class="logreg-bd">
+              <p>中国领先的物流服务整合平台。立刻注册，享受更多车源货源信息服务。</p>
+              <span class="btn-i-blue fr">
+              <a href="" target="_blank" title="点击注册">注册</a>
+              </span>
+              </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--底部版块 -->
+    <div class="footer">
+      <div class="innerwp clearfix">
+      <div class="copyright fl">
+      <a href="#" class="ftlogo"><strong>156</strong></a>Copyright &copy; 2004-2013 一五六电子商务有限公司 沪ICP备10015738号
+      </div>
+      <div class="appdowload fr">
+      <a href="#" class="appdown" title="点击下载客户端">下载手机客户端</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$(".logtxtbox").focus(
+function(){
+	$(this).parents("li").addClass("focus").siblings().removeClass("focus");
+	}
+)
+$(".logvalitxt").focus(
+function(){
+	$(".logtxtbox").parents("li").removeClass("focus");
+}
+)
+
+$(".logregbtm button").click(
+function(){
+	$(".erroinfo").animate({"opacity":"1","top":"15px"},500);
+	$(".logregwp").css({"padding-top":"84px"});
+	$("#logname").addClass("txtwarning").focus();
+	return false;
+	}
+)	
+})
+
+</script>
+</body>
+</html>

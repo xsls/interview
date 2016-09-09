@@ -1,0 +1,71 @@
+<p class="item-hd"><span class="fr">创建时间：<em class="ft12 ftgrey">{{#dateFormat createTime 'datehm'}}{{/dateFormat}}</em></span>
+<input type="checkbox"  name="all_ids_ck" id="ck-scid" class="ck-vt">运单号：<em class="ft12 ftblue">
+<a class="ftblue order_detail" target="_blank" href="{{#config
+'ctx'}}{{/config}}/order/Window/{{id}}/detail">{{orderNo}}</a></em></p>
+<div class="tab-bd">
+    <ul>
+        <li class="col co1">
+            <span class="scline">
+            {{#eq truckCertStatus 'IDENTIFIEDOK'}}<a href="{{ctx }}/truck/Window/{{truckId}}" target="_blank">{{truckLicenseNo}}</a><i class="icon i31-20 ico-idcerti ml10"></i>{{/eq}}
+            {{#logic '"IDENTIFIEDOK"!="?"'  truckCertStatus}}{{truckLicenseNo}}{{/logic}}
+            </span>
+            <span class="scdet ft12 ftgrey">{{driverName}}{{#eq certStatus 'IDENTIFIEDOK'}}{{#level driverSincerityLevel 'user'}}{{/level}}{{/eq}}</span>
+            <span class="scdet ft12 ftgrey">{{#numberFormat unitPrice '0.#'}}{{/numberFormat}}{{measureUnitName}}</span>
+        </li>
+        <li class="col co2" id="detail_index3{{id}}">
+            {{#eq statusValue 1}}
+                <span class="scstatus ftorange">{{statusName}}</span>
+                <span class="scdetail"><a href="{{#config 'ctx'}}{{/config}}/order/Window/{{id}}/detail" target="_blank">运单详情</a></span>
+                {{#eq certStatus 'IDENTIFIEDOK'}}
+                	<span class="scmap"><a href="javascript:void(0);" name="map_view">查看地图</a></span>
+                {{/eq}}
+            {{/eq}}
+            {{#logic '2==? || 3==? || 4==?' statusValue statusValue statusValue}}
+                <span class="scstatus ftgreen">{{statusName}}</span>
+                <span class="scdetail"><a href="{{#config 'ctx'}}{{/config}}/order/Window/{{id}}/detail" target="_blank">运单详情</a></span>
+                {{#eq certStatus 'IDENTIFIEDOK'}}
+	                {{#eq feedbackStatusValue 2}}
+	                    <span class="scmap ftgrey"><a href="{{#config 'ctx'}}{{/config}}/feedback/Window/{{id}}/detail" target="_blank">我已评价</a></span>
+	                {{/eq}}
+	                {{#eq feedbackStatusValue 3}}
+	                    <span class="scmap ftgrey">对方已评</span>
+	                {{/eq}}
+	                {{#eq feedbackStatusValue 4}}
+	                    <span class="scmap ftgrey"><a href="{{#config 'ctx'}}{{/config}}/feedback/Window/{{id}}/detail" target="_blank">双方已评</a></span>
+	                {{/eq}}
+                {{/eq}}
+            {{/logic}}
+            {{#logic '4<?' statusValue}}
+            <span class="scstatus ftgrey">运单取消</span>
+            <span class="scdetail"><a href="{{#config 'ctx'}}{{/config}}/order/Window/{{id}}/detail" target="_blank">运单详情</a></span>
+            {{#eq certStatus 'IDENTIFIEDOK'}}
+            	<span class="scmap"><a href="javascript:void(0);"  name="map_view">查看地图</a></span>
+            {{/eq}}
+            {{/logic}}
+            <span id="feedback_status_str_{{id}}"></span>
+        </li>
+        <li class="col co3" id="detail_index4{{id}}">
+            {{#eq statusValue 1}}
+                <span class="scbtn btn-a-blue"><a href="javascript:void(0);" class="br3 popup_receivegoods" title="确认收货">确认收货</a></span>
+            {{/eq}}
+            {{#logic '2==? || 3==? || 4==?' statusValue statusValue statusValue}}
+                {{#logic '1==? || 3==?' feedbackStatusValue feedbackStatusValue}}
+                    <span class="scbtn btn-a-white"><a href="javascript:void(0);" class="br3 popup_feedback" title="评价车主">评价车主</a></span>
+                {{/logic}}
+            {{/logic}}
+        </li>
+        <li class="col co4" id="detail_index5{{id}}">
+            {{#eq statusValue 1}}
+                <span class="cancelwaybill"><a href="javascript:void(0);" class="notice">发送通知</a>
+                </span><span class="cancelwaybill">
+                <a href="javascript:void(0);" class="br3 popup_bookingtruck_cancel">取消运单</a></span>
+                {{#eq certStatus 'IDENTIFIEDOK'}}
+                	<span class="cancelwaybill"><a href="javascript:void(0);"title="投诉车主" class="popup_complaint" >投诉车主</a></span>
+                {{/eq}}
+            {{/eq}}
+            {{#logic '(2==? || 3==? || 4==?) && (1==? || 3==?)' statusValue statusValue statusValue feedbackStatusValue feedbackStatusValue}}
+                <span class="cancelwaybill"><a href="javascript:void(0);" title="投诉车主" class="popup_complaint">投诉车主</a></span>
+            {{/logic}}
+        </li>
+    </ul>
+</div>

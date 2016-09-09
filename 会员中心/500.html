@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>156.com 壹物流</title>
+<meta name="author" content="chenchuang@156.com" />
+<meta name="keywords" content="156.com，壹物流" />
+<meta name="description" content="156.com 壹物流 重卡物流服务整合平台" />
+<link rel="shortcut icon" href="156.com/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/base.css" />
+<!--[if lte IE 6]><script language="javascript" src="lib/DD_belatedPNG.js"></script><![endif]-->
+</head>
+
+<body>
+<style>
+body {background:#f6f6f6 url(img/500bg.jpg) repeat-x center -303px ;}
+.container { background:url(img/500.jpg) no-repeat center center; height:570px }
+.backinfo { width:480px; margin:0 auto; padding-top:88px; text-align:center }
+.errortype { display:block; height:200px; font:bold 200px/200px "Trebuchet MS",Helvetica,Arial,"Times New Roman","Lucida Sans Unicode"; color:#fff; text-shadow:1px 1px 0 #e4ad38 }
+.tips { font-size:24px; color:#f60; padding-top:10px; text-shadow:1px 1px 0 #fff } 
+.tips span { display:block; padding-top:10px; font-size:14px; color:#777 }
+.backindex { position:absolute; width:100px; height:30px; line-height:30px; text-align:center; left:464px; top:25px; color:#464646; font-size:14px; text-decoration:underline }
+.footer { bottom:0; box-shadow:none; height:83px; background:#f1f1f1;background: #f1f1f1 url(img/ftbg.jpg) no-repeat center 0; width:100% }
+.footer .innerwp {padding:19px 0;}
+</style>
+<script src="lib/jquery-1.9.1.min.js"></script> 
+<script>
+$(function(){
+	function resize(){
+	var main = $(window).height() - $(".footer").outerHeight();
+	if (parseInt(main)>494)
+	{	
+		$(".footer").addClass("pa");
+	}
+	}
+	resize();
+	$(window).resize(function(){
+		resize();	
+	});
+})
+</script>
+<div class="container">
+<div class="innerwp pr">
+<div class="backinfo">
+<strong class="errortype">500</strong>
+<p class="tips">
+前方道路施工中，此路禁止通行!<span>我们将尽快为您扫清障碍，请稍后重新访问! </span>
+</p>
+</div>
+<a href="" class="backindex pa" title="点击返回首页">返回首页</a>
+</div>
+</div>
+<div class="footer">
+    <div class="innerwp clearfix">
+        <div class="copyright fl"> <a href="#" class="ftlogo">156</a><span class="ftarial">Copyright &copy;</span> 2004-2013 春宇集团有限公司 沪ICP备10015738号 </div>
+        <div class="appdowload fr"> <a href="#" class="appdown" title="点击下载客户端">下载手机客户端</a> </div>
+    </div>
+</div>
+</body>
+</html>

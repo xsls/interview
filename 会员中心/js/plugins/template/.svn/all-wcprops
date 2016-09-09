@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/156-app/!svn/ver/13975/Coding/member-web-app/src/main/webapp/resources/js/plugins/template
+END
+message.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/156-app/!svn/ver/11526/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/message.hbs
+END
+regions.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/156-app/!svn/ver/6669/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/regions.hbs
+END
+tab.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/156-app/!svn/ver/6669/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/tab.hbs
+END
+channel.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/156-app/!svn/ver/6669/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/channel.hbs
+END
+dialogue.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/156-app/!svn/ver/13975/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/dialogue.hbs
+END
+dropdown.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/156-app/!svn/ver/8317/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/dropdown.hbs
+END
+uploadComplete.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/156-app/!svn/ver/13137/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/uploadComplete.hbs
+END
+selectItem.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/156-app/!svn/ver/12657/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/selectItem.hbs
+END
+select.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/156-app/!svn/ver/13553/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/select.hbs
+END
+uploading.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/156-app/!svn/ver/6669/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/uploading.hbs
+END
+region.hbs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/156-app/!svn/ver/6669/Coding/member-web-app/src/main/webapp/resources/js/plugins/template/region.hbs
+END

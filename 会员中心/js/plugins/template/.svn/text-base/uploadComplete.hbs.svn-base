@@ -1,0 +1,7 @@
+<div id="{{fileID}}" class="upsucess uploadify-queue-item">
+    <input type="hidden" name="{{hiddenName}}" value="{{resID}}">
+    <div class="fr">
+        <a class="close" title="取消上传" href="javascript:$('#{{instanceID}}').uploadify('cancel', '*')"></a>
+    </div>
+    <span class="sucess"><span class="sucimg pr"><img src="{{previewURL}}" alt="{{fileName}}"><i class="icon i14 ico-ok pa"></i></span>{{fileName}}</span>
+</div>

@@ -1,0 +1,19 @@
+<!--对话框1消息-->
+<div class="dia-main ofh pa" style="bottom:29px;bottom: 29px;height: 297px;width: 300px;display: inline-block;">
+<div class="dia-body">
+    <div class="dia-top bg-grey">
+        <div class="fl"><span class="dia-name"></span><span class="news-state news-green vm"></span></div>
+        <div class="fr"><span class="new-project"><a href="#"><i class="icon i14 i-npriject"></i></a></span> <span
+                class="dia-min"><i class="icon i9-4 i-min"></i></span> <span class="dia-top-close"><i
+                class="icon i8 i-top-close"></i></span></div>
+    </div>
+    <div class="dia-content pr scrollable">
+    </div>
+</div>
+</div>
+<div class="dia-bottom fr pa">
+    <div class="inner bg-grey pr">
+        <p><span class="dia-name"></span><span class="news-state news-green vm"></span><span class="fr dia-close pa"><i
+                class="icon i8 i-top-close"></i></span></p>
+    </div>
+</div>

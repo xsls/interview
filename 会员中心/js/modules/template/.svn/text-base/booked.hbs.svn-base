@@ -1,0 +1,21 @@
+<p class="item-hd">
+    <span class="fr">
+        <em class="ft12 ftgrey">{{#dateFormat createTime 'datehm'}}{{/dateFormat}}</em>
+    </span>
+    <input type="checkbox" {{#selected}}checked="checked"{{/selected}} name="ck-booked" id="ck-scid" class="ck-vt">
+    <strong class="carid ftblue ftbold"><a target="_blank" href="{{#config
+    'ctx'}}{{/config}}/truck/Window/{{id}}">{{truckLicenseNo}}</a></strong>
+    {{#logic '"IDENTIFIEDOK"=="?" || "3"=="?"' truckCertStatus truckCertStatus}}
+    <i class="icon i31-20 ico-idcerti"></i>
+    {{/logic}}
+    <i class="icon i13-21 ico-map"></i>
+</p>
+<div class="tab-bd">
+    <ul>
+       <li class="col co1"> <span class="carowner ftgrey">{{userName}},{{phone}} {{#level sincerityLevel 'user'}}{{/level}}</span> </li>
+       <li class="col co2"> <span class="uniprice ftgrey">{{#numberFormat quotePrice '0.#'}}{{/numberFormat}}</em>{{unitName}}</span></li>
+       {{#logic '4!=?' orderStatus}}
+       <li class="col co3"> <span class="cancelbook"><a href="javascript:void(0);">取消订车</a></span> </li>
+       {{/logic}}
+    </ul>
+</div>

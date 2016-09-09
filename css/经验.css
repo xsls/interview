@@ -1,4 +1,6 @@
+公积金账号:163731056205
 总结:
+经典总结＝>
 背景图的设置：
     background: url("./../img/bg.jpg") fixed center center no-repeat;
     background-size: cover;
@@ -7,3 +9,4 @@ position:relative(多用在父级元素上)
 position:absolute（多用在子元素上）
 position:fixed
 position:static
+css图片的设计:小图抠出来，在进行一个方向的设置譬如宽度设置百分比，高度不设置

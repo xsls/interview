@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="chosen.css">
+<link rel="stylesheet" href="../../css/base.css">
+</head>
+<body>
+<form>
+    <select style="width:500px;" class="chosen">
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+        <option>煤炭</option>
+    </select>
+    
+    
+    
+<script src="jquery-1.9.1.min.js" type="text/javascript"></script> 
+<script src="chosen.jquery.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(function(){
+	$(".chosen").chosen();  
+})
+</script>
+</form>
+</body>
+</html>

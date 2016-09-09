@@ -1,0 +1,19 @@
+<dt><span class="fl">货源号：<em><a class="ftblue freight_detail" target="_blank" href="{{#config
+'ctx'}}{{/config}}/freight/Window/{{entity.id}}/detail">{{entity
+.freightNo}}</a></em></span><em class="fr">{{#dateFormat entity.createTime
+'datehm'}}{{/dateFormat}}</em></dt>
+<dd class="ctrl-listinfo">
+    <div class="fl">
+        <h4><span>{{#addrCut entity.departureAddrName " "}}{{/addrCut}}</span>-<span>{{#addrCut entity.destinationAddrName " "}}{{/addrCut}}</span></h4>
+        <em>{{entity.goodsDesc}}&nbsp;{{entity.unitPrice}}{{#logic '?!=null && ?!=""' entity.unitPrice entity.unitPrice}}{{entity.priceUnitName}}{{/logic}}</em></div>
+    <div class="fr">
+        {{#eq entity.status "RUNNING"}}
+            <p class="ftgreen ftbold tc">挂盘中</p>
+        {{/eq}}
+        {{#eq entity.status "FINISHED"}}
+            <p class="ftorange ftbold tc">发布完成</p>
+        {{/eq}}
+        <p><em>待订：<span class="ftorange awaiting">{{stayTruck}}</span>辆</em></p>
+        <p><em>已订：<span class="ftorange booked">{{alreadyTruck}}</span>辆</em></p>
+    </div>
+</dd>

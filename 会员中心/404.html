@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<title>156.com 壹物流</title>
+<meta name="author" content="chenchuang@156.com" />
+<meta name="keywords" content="156.com，壹物流" />
+<meta name="description" content="156.com 壹物流 重卡物流服务整合平台" />
+<link rel="shortcut icon" href="156.com/img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="css/base.css" />
+<!--[if lte IE 6]><script language="javascript" src="lib/DD_belatedPNG.js"></script><![endif]-->
+</head>
+
+<body>
+<style>
+body {background:#f6f6f6;}
+.container { background:url(img/404.jpg) no-repeat center center; height:800px }
+.backinfo { width:480px; margin:0 auto; padding-top:140px; text-align:center }
+.errortype { display:block; height:200px; font:bold 200px/200px "Trebuchet MS",Helvetica,Arial,"Times New Roman","Lucida Sans Unicode"; color:#777; text-shadow:1px 1px 0 #23639b }
+.tips { font-size:24px; color:#f60; padding-top:20px } 
+.tips span { display:block; padding-top:10px; font-size:14px; color:#777 }
+.tips span a { color:#1d75c3; text-decoration:underline; margin-left:10px }
+.tips span a:hover { color:#f60 }
+.toctrl { position:absolute; width:132px; height:133px; line-height:100px; text-align:center; left:135px; top:330px; color:#df6d41; font-size:18px; background:url(img/go.jpg) no-repeat 0 0 }
+.footer { bottom:0; box-shadow:none; height:83px; background:#f1f1f1;background: #f1f1f1 url(img/ftbg.jpg) no-repeat center 0; width:100% }
+.footer .innerwp {padding:19px 0;}
+.backbtn {background:url(img/404backbtn.jpg) no-repeat; width:211px; height:56px; top:556px; left:400px }
+</style>
+<script src="lib/jquery-1.9.1.min.js"></script> 
+<script>
+$(function(){
+	function resize(){
+	var main = $(window).height() - $(".footer").outerHeight();
+	if (parseInt(main)<=494)
+	{	
+		$(".footer").removeClass("pa");
+	}
+	}
+	resize();
+	$(window).resize(function(){
+		resize();	
+	});
+})
+</script>
+<div class="container">
+<div class="innerwp pr">
+<div class="backinfo">
+<strong class="errortype">404</strong>
+<p class="tips">
+很抱歉，页面失踪了!<span>我们找了所有线路都没有找到您要的页面! <a href="" title="点击返回我的156"> &gt; 返回我的156</a></span>
+</p>
+</div>
+<a href="" class="toctrl pa" title="点击去总控台">去总控台</a>
+<a type="button" class="backbtn pa" href="#" title="点击返回我的156"></a>
+</div>
+</div>
+<div class="footer pa">
+    <div class="innerwp clearfix">
+        <div class="copyright fl"> <a href="#" class="ftlogo">156</a><span class="ftarial">Copyright &copy;</span> 2004-2013 春宇集团有限公司 沪ICP备10015738号 </div>
+        <div class="appdowload fr"> <a href="#" class="appdown" title="点击下载客户端">下载手机客户端</a> </div>
+    </div>
+</div>
+</body>
+</html>

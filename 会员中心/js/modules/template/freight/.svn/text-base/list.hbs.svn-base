@@ -1,0 +1,36 @@
+<div class="item-hd item-nav"><div class="fr"><span><em class="ft12
+ftgrey">发布人：</em>{{pushUser}}</span><span><em class="ft12
+ ftgrey">创建时间：</em>{{#dateFormat entity.createTime 'datehm'}}{{/dateFormat}}</span></div>货源号：<em class="ft12 ftgrey">{{entity.freightNo}}</em></div>
+<div class="tab-bd">
+    <ul>
+        <li class="col co1">
+            <span class="scline" title="{{entity.departureAddrName }}&mdash;{{entity.destinationAddrName}}">{{entity.departureAddrName }}&mdash;{{entity.destinationAddrName}}</span>
+            <span class="scdet ft12 ftgrey">{{goodName}} {{#numberFormat entity.totalTransport '0.#'}}{{/numberFormat}}吨</span>
+            <span class="scdate ft12 ftgrey">{{#dateFormat entity.totalTransport 'datec'}}{{/dateFormat}}装货</span>
+        </li>
+        <li class="col co2">
+            <span class="scfrom"><i class="icon i15 ico-scfrom"></i></span>
+            <span class="scto"><i class="icon i15 ico-scto"></i></span>
+        </li>
+        <li class="col co3">
+            {{#eq entity.status.value 1}}<span class="scstatus ftgreen">已完成</span>{{/eq}}
+            {{#eq entity.status.value 2}}<span class="scstatus ftgreen">{{entity.status.name}}</span>{{/eq}}
+            <span class="scdetail"><a href="{{#config 'ctx'}}{{/config}}/freight/Window/{{entity.id}}/detail"
+            target="_blank">货源详情</a></span>
+            <span class="scmap"><a href="javascript:void(0);" target="_blank">查看地图</a></span>
+        </li>
+        <li class="col co4">
+            <span class="scbtn btn-a-blue"><a href="{{#config 'ctx'}}{{/config}}/bookingTruck/winauto/{{entity.id }}/view"
+            class="br3" title="订车">订车</a></span>
+            <span class="scbooked ftgrey">已订：<em class="ftorange">{{alreadyTruck}}</em>辆</span>
+            <span class="unbooked ftgrey">待订：<em class="ftorange">{{stayTruck}}</em>辆</span>
+        </li>
+        <li class="col co5">
+            <span class="screlate"><a href="javascript:void(0);" target="_blank">干系人管理</a></span>
+            <span class="screlate"><a href="javascript:void(0);" class="related_order" data-freight-id="{{entity.id}}"
+            >相关运单</a></span>
+            <span class="screlate"><a href="{{#config 'ctx'}}{{/config}}/freight/Window/push?againPush=true&freightId={{entity.id }}"
+            target="_blank">复制发布</a></span>
+        </li>
+    </ul>
+</div>

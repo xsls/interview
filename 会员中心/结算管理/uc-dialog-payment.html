@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>156.com 壹物流</title>
+<meta name="author" content="chenchuang@chunyu.com" />
+<meta name="keywords" content="156.com，壹物流" />
+<meta name="description" content="156.com 壹物流 重卡物流服务整合平台" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<!--[if lte IE 6]><script language="javascript" src="lib/DD_belatedPNG.js"></script><![endif]-->
+</head>
+
+<body>
+<!--弹窗版块 -->
+<div class="blackmask"></div>
+<div class="showdialog pmdialog">
+    <div class="sd-hd">
+        <h2 class="sdtit">结算运费</h2>
+        <a href="" class="close br3" title="点击关闭窗口">关闭</a> </div>
+    <div class="sd-bd clearfix">
+        <div class="pminfo fl">
+        <h3>结算单信息</h3>
+        <div class="pmicont br3">
+            <p class="pmihd">结算单号：<a href="">C20131008001</a></p>
+            <ul class="freinfo">
+                <li>
+                    <label for="">线路：</label>
+                    <div class="pmcont">内蒙古 呼伦贝尔--新疆 塔里木</div>
+                </li>
+                <li>
+                    <label for="">货物：</label>
+                    <div class="pmcont">五金煤炭</div>
+                </li>
+                <li>
+                    <label for="">运价：</label>
+                    <div class="pmcont"><strong class="ftbold ftorange">1200元/吨</strong></div>
+                </li>
+            </ul>
+            <ul class="truoinfo">
+                <li class="btm2">
+                    <label for="">车牌号：</label>
+                    <div class="pmcont">晋A8888<i class="icon i31-20 ico-idcerti"></i></div>
+                </li>
+                <li class="btm2">
+                    <label for="">司机：</label>
+                    <div class="pmcont">姑苏慕容<span class="userlevel"> <i class="icon i14 ico-lv4"></i> <i class="icon i14 ico-lv3"></i> <i class="icon i14 ico-lv2"></i> <i class="icon i14 ico-lv1"></i> <i class="icon i14 ico-lv1"></i> </span></div>
+                </li>
+                <li>
+                    <label for="">手机号：</label>
+                    <div class="pmcont">13788664422</div>
+                </li>
+                <li>
+                    <label for="">开户银行：</label>
+                    <div class="pmcont">工商银行</div>
+                </li>
+                <li>
+                    <label for="">收款账号：</label>
+                    <div class="pmcont">9558 8290 0212 0201</div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="pmright fr">
+        <form action="" method="" name="" id="">
+        <fieldset class="bdinfo">
+        <legend>磅单信息</legend>
+        <p><label for="original">原发货量：</label><span class="pmcont"><span class="unit pr"><input type="text" name="" id="original" class="txtbox txtpm br3"><em class="pa">吨</em></span><img src="../img/temp.jpg" alt="" class="bdimg"></span></p>
+        <p><label for="final">实发货量：</label><span class="pmcont"><span class="unit pr"><input type="text" name="" id="final" class="txtbox txtpm br3"><em class="pa">吨</em></span><img src="../img/temp.jpg" alt="" class="bdimg"></span></p>
+        <p class="pmtotal"><span class="fr">参考运费：<strong class="ftbold ft77">6778 元</strong></span>货损：<strong class="ftgrey">0.2</strong> 吨</p>
+        </fieldset>
+        <fieldset class="payinfo">
+        <legend>支付信息</legend>
+        <p><label for="finalpay">应付运费：<em class="ftorange">*</em></label><span class="pmcont"><span class="unit pr"><input type="text" name="" id="finalpay" class="txtbox txtpm br3"><em class="pa">元</em></span><span class="help pr"><i class="icon i12 ico-question curhand"></i><strong class="tipmsg br3 pa"><i class="tmarrow pa"></i>请与司机协商确认后，填写实际运费金额。</strong></span></span></p>
+        <p><label for="payer">运费支付方：<em class="ftorange">*</em></label><span class="pmcont"><input type="text" name="" id="payer" class="txtbox txtpay br3"></span></p>
+        </fieldset>
+        </form>
+        </div>
+        <div class="sd-ft cl">
+            <p class="fmbtm"><span class="fl">温馨提示：提交结算后，付款单位可在支付管理菜单中支付运费！</span><span class="cancel btn-a-white"><a href="" class="br3" title="关闭">关闭</a></span><span class="confirm btn-a-blue"><a href="" class="br3" title="提交">提交</a></span></p>
+        </div>
+        
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+   $(".help").hover(function(){$(this).children(".tipmsg").show()},function(){$(this).children(".tipmsg").hide()})
+})
+</script>
+</html>

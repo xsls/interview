@@ -1,0 +1,5 @@
+<p class="suglist">
+{{#each regions}}
+    <a href="javascript:void(0)" data-type="{{type}}" data-region-id="{{id}}">{{#highlight parent.name ../keyword}}{{/highlight}}-{{#highlight name ../keyword}}{{/highlight}}({{#highlight pinyin ../keyword}}{{/highlight}})</a>
+{{/each}}
+</p>

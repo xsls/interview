@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<title>156.com 壹物流</title>
+<meta name="author" content="chenchuang@chunyu.com" />
+<meta name="keywords" content="156.com，壹物流" />
+<meta name="description" content="156.com 壹物流 重卡物流服务整合平台" />
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/main.css" />
+<!--[if lte IE 6]><script language="javascript" src="lib/DD_belatedPNG.js"></script><![endif]-->
+</head>
+
+<body>
+<!--弹窗版块 -->
+<div class="blackmask"></div>
+<div class="showdialog upayer">
+    <div class="sd-hd">
+        <h2 class="sdtit">修改付款方</h2>
+        <a href="" class="close br3" title="点击关闭窗口">关闭</a> </div>
+    <div class="sd-bd clearfix">
+        <div class="pminfo fl">
+        <h3>结算单信息</h3>
+        <div class="pmicont br3">
+            <p class="pmihd">结算单号：<a href="">C20131008001</a></p>
+            <ul class="painfo">
+                <li>
+                    <label for="">结算状态：</label>
+                    <div class="pmcont"><em class="ftorange ftbold">付款中</em></div>
+                </li>
+                <li>
+                    <label for="">应付运费：</label>
+                    <div class="pmcont">80000元</div>
+                </li>
+                <li class="btm2">
+                    <label for="">收款人：</label>
+                    <div class="pmcont">姑苏慕容<span class="userlevel"> <i class="icon i14 ico-lv4"></i> <i class="icon i14 ico-lv3"></i> <i class="icon i14 ico-lv2"></i> <i class="icon i14 ico-lv1"></i> <i class="icon i14 ico-lv1"></i> </span></div>
+                </li>
+                <li>
+                    <label for="">手机号：</label>
+                    <div class="pmcont">13788664422</div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="pmright fr">
+        <form action="" method="" name="" id="">
+        <fieldset class="payerinfo">
+        <legend>付款方</legend>
+        <p><label for="original">原付款单位：</label><span class="pmcont"><a href="" class="ftblue">陕西捷达运输股份有限公司</a></span></p>
+        <p class="bdt"><label for="newpayer">新付款单位：</label><span class="pmcont"><input type="text" name="" id="newpayer" class="txtbox txtpay br3"><span class="help pr"><i class="icon i12 ico-question curhand"></i><strong class="tipmsg br3 pa"><i class="tmarrow pa"></i>注：更改付款方后，原付款单位的付款单将被作废！</strong></span></span></p>
+        </fieldset>
+        </form>
+        </div>
+        <div class="sd-ft cl">
+            <p class="fmbtm"><span class="cancel btn-a-white"><a href="" class="br3" title="关闭">关闭</a></span><span class="confirm btn-a-blue"><a href="" class="br3" title="提交">提交</a></span></p>
+        </div>
+        
+    </div>
+</div>
+</body>
+<script src="../lib/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+   $(".help").hover(function(){$(this).children(".tipmsg").show()},function(){$(this).children(".tipmsg").hide()})
+})
+</script>
+</html>

@@ -1,0 +1,19 @@
+<p class="item-hd"><span class="fr"><em class="ft12 ftgrey">{{#dateFormat createTime 'datehm'}}{{/dateFormat}}</em></span>
+    <input type="checkbox" {{#selected}}checked="checked"{{/selected}} name="ck-scid" class="ck-vt">
+    <strong class="carid ftblue ftbold"><a target="_blank"  href="{{#config
+    'ctx'}}{{/config}}/truck/Window/{{id}}">{{truckLicenseNo}}</a></strong>
+    {{#logic '"IDENTIFIEDOK"=="?" || "3"=="?"' truckCertStatus truckCertStatus}}
+        <i class="icon i31-20 ico-idcerti"></i>
+    {{/logic}}
+    <i class="icon i13-21 ico-map"></i>
+    <span class="distance hide">约<strong class="ftorange">3.5<span class="hide">{{#numberFormat transportDistance '0.#'}}{{/numberFormat}}</span></strong>公里</span>
+</p>
+<div class="tab-bd">
+  <ul>
+    <li class="col co1"> <span class="cartype ftgrey">{{truckModelName}} {{#numberFormat regTonnage '0.#'}}{{/numberFormat}}吨</span> <span
+    class="carowner ftgrey">{{userName}}{{#level sincerityLevel 'user'}}{{/level}}</span><span class="cophone ftgrey">{{phone}}</span> </li>
+    <li class="col co2"> <span class="uniprice ftorange"><em class="ftarial ft20">{{#numberFormat quotePrice '0.#'}}{{/numberFormat}}</em>{{unitName}}</span> </li>
+    <li class="col co3"> <span class="btn-a-blue"><a href="javascript:void(0);" class="br3 book-btn">订车<i class="icon
+     i15-12 ico-btnarw"></i></a></span> <span class="cprtotal ftgrey hide">合作过<em class="ftorange">50</em>次</span> </li>
+  </ul>
+</div>
