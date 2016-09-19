@@ -46,9 +46,23 @@ php的面相对象的实践：
 4.类是一个模版
 5.类和对象的关系
 
-
-
-
 php类的实例化
     1.创建一个对象
     2.实例化，就是创建一个对象
+
+
+
+    对象引用赋值
+
+
+    析构函数
+
+    $james = new Player();
+    $james1 = $james;两个对象
+    $james2 = &$james;(立即调用析构函数)$james2是$james的影子
+    $james = null;
+
+
+    function __destruct() {
+        $this ->
+    }
